@@ -12,6 +12,7 @@
     height: 100vh;
     display: flex;
     justify-content: center;
+    align-items: flex-end;
 }
 
 .div-general .div-redes-sociales {
@@ -35,7 +36,7 @@
 .div-general .div-redes-sociales .div-iconos a {
     margin-right: 8%;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 35px;
     color: #fff;
 }
 
