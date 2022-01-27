@@ -41,13 +41,11 @@
 }
 
 .div-fondo {
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(../images/fondo-registro.png);
+    position: absolute;
+    z-index: -1;
+    background-color: rgba(10, 10, 10, 0.650);
     height: 100vh;
     width: 100vw;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    background-attachment: fixed;
 }
 
 .div-general .div-registro {
