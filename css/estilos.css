@@ -3,6 +3,10 @@
     src: url('../tipografias/Gotham_Book.ttf');
 }
 
+body {
+    overflow: hidden;
+}
+
 
 /*Estilos para el registro*/
 
@@ -12,38 +16,15 @@
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-end;
-}
-
-.div-general .div-redes-sociales {
-    position: absolute;
-    display: flex;
-    justify-content: right;
     align-items: center;
-    width: 100vw;
-    height: 100px;
-}
-
-.div-general .div-redes-sociales .div-iconos {
-    position: absolute;
-    display: flex;
-    justify-content: right;
-    align-items: center;
-    width: 35%;
-    height: 70px;
-}
-
-.div-general .div-redes-sociales .div-iconos a {
-    margin-right: 8%;
-    text-decoration: none;
-    font-size: 35px;
-    color: #fff;
+    flex-direction: column;
+    z-index: 2;
 }
 
 .div-fondo {
     position: absolute;
-    z-index: -1;
-    background-color: rgba(10, 10, 10, 0.650);
+    z-index: -2;
+    background-color: rgba(0, 0, 0, 0.4);
     height: 100vh;
     width: 100vw;
 }
@@ -71,8 +52,8 @@
 }
 
 .div-general .div-registro .formulario .div-logo img {
-    width: 50%;
-    margin-bottom: 6%;
+    width: 100%;
+    margin-bottom: 14%;
 }
 
 .div-general .div-registro .formulario .div-campos {
@@ -142,25 +123,61 @@ input[type=number]::-webkit-outer-spin-button {
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-.div-general .div-registro .formulario .div-logo-footer img {
-    width: 30%;
     margin-top: 6%;
 }
 
+.div-general .div-registro .formulario .div-logo-footer .div-fecha {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
+
+.div-general .div-registro .formulario .div-logo-footer .div-fecha p,
+h2 {
+    font-size: 15px;
+    color: #fff;
+    font-family: "Gotham Book";
+}
+
+.div-general .div-registro .formulario .div-logo-footer .div-fecha h2 {
+    margin-top: -16px;
+}
+
+.div-general .div-registro .formulario .div-logo-footer img {
+    width: 45%;
+    margin-left: 2%;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales {
+    width: 100vw;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales .div-iconos {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.div-general .div-registro .formulario .div-redes-sociales .div-iconos a {
+    margin-right: 3%;
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff;
+}
+
 @media (max-width: 500px) {
-    .div-general .div-redes-sociales {
+    .div-general .div-registro .formulario .div-redes-sociales {
+        margin-top: 5%;
+    }
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos {
         justify-content: center;
     }
-    .div-general .div-redes-sociales .div-iconos {
-        width: 90%;
-        justify-content: center;
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos a {
+        margin-right: 6%;
     }
-    .div-general .div-redes-sociales .div-iconos a {
-        margin-right: 10%;
-    }
-    .div-general .div-redes-sociales .div-iconos .a-ultimo {
+    .div-general .div-registro .formulario .div-redes-sociales .div-iconos .a-ultimo {
         margin-right: 0;
     }
     .div-general .div-registro {
@@ -178,5 +195,14 @@ input[type=number]::-webkit-outer-spin-button {
     }
     .div-general .div-registro .formulario .div-campos .div-input:not(.div-boton) {
         margin-bottom: 5%;
+    }
+    .div-general .div-registro .formulario .div-logo-footer img {
+        width: 37%;
+    }
+    .div-general .div-registro .formulario .div-logo-footer .div-fecha p,
+    h2 {
+        font-size: 12px;
+        color: #fff;
+        font-family: "Gotham Book";
     }
 }

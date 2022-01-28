@@ -7,15 +7,15 @@
 
     Superslides = function(el, options) {
         this.options = $.extend({
-            play: 3800,
+            play: 4500,
             animation_speed: 1000,
             animation_easing: 'swing',
             animation: 'slide',
             inherit_width_from: window,
             inherit_height_from: window,
-            pagination: true,
+            pagination: false,
             hashchange: false,
-            scrollable: true,
+            scrollable: false,
             elements: {
                 preserve: '.preserve',
                 nav: '.slides-navigation',
@@ -150,7 +150,7 @@
                 }
             },
             images: function() {
-                var $images = that.$container.find('img')
+                var $images = that.$container.find('section')
                     .not(that.options.elements.preserve)
 
                 $images.removeAttr('width').removeAttr('height')
@@ -186,9 +186,9 @@
             children: function() {
                 var $children = that.$container.children();
 
-                if ($children.is('img')) {
+                if ($children.is('#imagen')) {
                     $children.each(function() {
-                        if ($(this).is('img')) {
+                        if ($(this).is('#imagen')) {
                             $(this).wrap('<div>');
 
                             // move id attribute

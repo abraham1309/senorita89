@@ -1,22 +1,41 @@
 #slides {
     position: absolute;
-    z-index: -2;
+    height: 100vh;
 }
 
 #slides .slides-container {
     display: none;
+    z-index: -4;
+    height: 100vh;
 }
 
 #slides .slides-container .container {
     display: flex;
     justify-content: center;
-    align-items: flex-end;
+    align-items: center;
     height: 100%;
     width: 100%;
-    padding-bottom: 5%;
+}
+
+#slides .slides-container .fondo {
+    background: url(../images/fondo_carrusel.jpg);
+    width: 100vw;
+    height: 100vh;
+}
+
+#slides .slides-container .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
     color: #fff;
     font-size: 25px;
     font-family: 'Hammersmith One', sans-serif;
+}
+
+#slides .slides-container .container img {
+    height: 100%;
 }
 
 #slides .scrollable {
@@ -37,7 +56,6 @@
 
 
 /*
-
 .slides-navigation {
     margin: 0 auto;
     position: absolute;
@@ -61,7 +79,6 @@
 .slides-navigation a.next {
     right: 2%;
 }
-
 
 .slides-pagination {
     position: absolute;
